@@ -1,0 +1,7 @@
+# Default ignored files
+/target/
+/.idea/
+/.bsp/
+/project/project/
+/project/src/
+/project/target/
