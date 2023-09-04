@@ -20,9 +20,9 @@
     + 상권별 요식업종 변화율 지수: RunCateringChangeScore
     + 상권별 요식업종 활성도 지수: RunCateringActivityScore
 ## jar파일 및 실행
-* sshpass -pscp@1234 ssh -o StrictHostKeyChecking=no hdfsuser@211.180.114.59
-* jar 파일: 211.80.114.59 서버 /home/hdfsuser/at/at.jar
-* log 파일: 211.80.114.59 서버 /home/hdfsuser/at/at_log/일별로그
+* sshpass -pscp@1234 ssh -o StrictHostKeyChecking=no hdfsuser@0.0.0.0
+* jar 파일: 0.0.0.0 서버 /home/hdfsuser/at/at.jar
+* log 파일: 0.0.0.0 서버 /home/hdfsuser/at/at_log/일별로그
 * 현재 배치 작업 없음
 * 실행 방법
     1. /home/hdfsuser/batch/at/at.sh 쉘 스크립트
@@ -90,7 +90,7 @@
         7. 주소 정제
             1. 주소 정제 전처리
             2. 도로명 주소 정제 / 지번 주소 정제
-                * 이미 정제되어 시군구 코드 있는 주소 값 가져오기 (211.180.114.71 서버의 AT DB의 ADDR_SGG)
+                * 이미 정제되어 시군구 코드 있는 주소 값 가져오기 (0.0.0.0 서버의 AT DB의 ADDR_SGG)
                 * 이미 정제된 주소가 아닌 주소 정제
                 * DB에 저장
             3. 시군구 코드 부착
@@ -125,10 +125,10 @@
                 - 127.0.0.1 서버 PUBLIC_DATA DB
             * martDataJdbcProp() -> (url, connProp)
                 - 마트 데이터 저장용
-                - 211.180.114.71 서버 AT DB
+                - 127.0.0.1 서버 AT DB
             * potentialPopJdbcProp() -> (url, connProp)
                 - 인구 지수 중 잠재지수 값
-                - 211.180.114.98 서버 SM DB
+                - 127.0.0.1 서버 SM DB
             * scoreJdbcPop() -> (url, connProp)
                 - 지수 결과 저장
                 - 0.0.0.0 서버 aatbc_db DB
